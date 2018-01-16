@@ -30,7 +30,7 @@ Post.findById({ _id: '5a5c5277d23c020d6c50a58f' }, function (err, post) {
         if (post.comments[i].id === '5a5c5277d23c020d6c50a590') {
             post.comments.splice(i, 1);
             post.save(function(error, data) {
-                if (err) { return console.error(error); }
+                if (error) { return console.error(error); }
                 console.log(data);
             });
         }
@@ -42,7 +42,7 @@ Post.findById({ _id: '5a5c5277d23c020d6c50a58f' }, function (err, post) {
 //     if (err) throw err;
 //     post.comments.id('5a5c5277d23c020d6c50a590').remove();
 //     post.save(function(error, data) {
-//         if (err) { return console.error(error); }
+//         if (error) { return console.error(error); }
 //         console.log(data);
 //     });
 // });
